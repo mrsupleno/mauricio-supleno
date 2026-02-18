@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maurício Supleno - Terapeuta especialista em Terapia Provocativa e Hipnose Integral. Método Supleno com resultados comprovados.">
+    <title>Maurício Supleno - Terapia Provocativa & Hipnose Integral</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #001f3f 0%, #0074D9 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        header .subtitle {
+            font-size: 1.5em;
+            color: #2ECC40;
+            margin-bottom: 15px;
+        }
+        
+        header p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #2ECC40;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            transition: transform 0.3s, background 0.3s;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+            background: #27AE34;
+        }
+        
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 30px;
+        }
+        
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #0074D9;
+        }
+        
+        .stat-label {
+            font-size: 1.1em;
+            color: #666;
+        }
+        
+        /* Abordagens */
+        .abordagens {
+            background: #f5f5f5;
+            padding: 80px 0;
+        }
+        
+        .abordagens h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #001f3f;
+        }
+        
+        .abordagens-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .abordagem-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 5px solid #2ECC40;
+        }
+        
+        .abordagem-card h3 {
+            color: #0074D9;
+            margin-bottom: 10px;
+        }
+        
+        /* Protocolo */
+        .protocolo {
+            padding: 80px 0;
+        }
+        
+        .protocolo h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 60px;
+            color: #001f3f;
+        }
+        
+        .protocolo-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .step-letter {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #0074D9, #001f3f);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            font-weight: bold;
+            margin: 0 auto 20px;
+            border: 3px solid #2ECC40;
+        }
+        
+        .step h3 {
+            color: #0074D9;
+            margin-bottom: 15px;
+        }
+        
+        /* Diferenciais */
+        .diferenciais {
+            background: #f5f5f5;
+            padding: 80px 0;
+        }
+        
+        .diferenciais h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 60px;
+            color: #001f3f;
+        }
+        
+        .diferenciais-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .diferencial-item {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .diferencial-icon {
+            width: 60px;
+            height: 60px;
+            background: #2ECC40;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            margin: 0 auto 20px;
+        }
+        
+        .diferencial-item h3 {
+            color: #0074D9;
+            margin-bottom: 10px;
+        }
+        
+        /* Sobre */
+        .sobre {
+            padding: 80px 0;
+        }
+        
+        .sobre h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #001f3f;
+        }
+        
+        .sobre-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.8;
+        }
+        
+        .sobre-content p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+        
+        /* CTA */
+        .cta {
+            background: linear-gradient(135deg, #001f3f 0%, #0074D9 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #001f3f;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        footer a {
+            color: #2ECC40;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .abordagens-grid, .protocolo-steps, .diferenciais-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Maurício Supleno</h1>
+            <div class="subtitle">Terapia Provocativa & Hipnose Integral</div>
+            <p>Transforme sua vida através de métodos comprovados e resultados duradouros</p>
+            <a href="https://wa.me/5527981125528?text=Olá!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20atendimento!" class="btn">Agendar Sessão</a>
+        </div>
+    </header>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Anos de Experiência</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">Vidas Transformadas</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Dedicação aos Resultados</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="abordagens">
+        <div class="container">
+            <h2>Abordagens Terapêuticas</h2>
+            <p style="text-align:center; margin-bottom:50px;">Combinando técnicas avançadas para resultados extraordinários</p>
+            
+            <div class="abordagens-grid">
+                <div class="abordagem-card">
+                    <h3>Terapia Provocativa</h3>
+                    <p>Método direto e transformador que desafia crenças limitantes e promove mudanças profundas de forma acelerada.</p>
+                </div>
+                <div class="abordagem-card">
+                    <h3>Hipnose Integral</h3>
+                    <p>Técnicas avançadas de hipnoterapia para acessar o inconsciente e promover transformações duradouras.</p>
+                </div>
+                <div class="abordagem-card">
+                    <h3>PNL Avançada</h3>
+                    <p>Programação Neurolinguística aplicada para reprogramar padrões mentais e comportamentais.</p>
+                </div>
+                <div class="abordagem-card">
+                    <h3>Coaching Ontológico</h3>
+                    <p>Desenvolvimento pessoal profundo, trabalhando o ser em sua essência para resultados autênticos.</p>
+                </div>
+                <div class="abordagem-card">
+                    <h3>Terapia Breve</h3>
+                    <p>Foco em soluções práticas e objetivas, trazendo resultados em menor tempo.</p>
+                </div>
+                <div class="abordagem-card">
+                    <h3>Método Supleno</h3>
+                    <p>Integração exclusiva de técnicas que potencializam os resultados terapêuticos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="protocolo">
+        <div class="container">
+            <h2>O Método Supleno de Transformação</h2>
+            <p style="text-align:center; margin-bottom:50px;">Um processo estruturado para mudanças reais e duradouras</p>
+            
+            <div class="protocolo-steps">
+                <div class="step">
+                    <div class="step-letter">V</div>
+                    <h3>Vínculo</h3>
+                    <p>Estabelecemos uma conexão de confiança para entender seus desafios, objetivos e o que realmente importa para você.</p>
+                </div>
+                <div class="step">
+                    <div class="step-letter">I</div>
+                    <h3>Instrução</h3>
+                    <p>Desconstruímos crenças limitantes e construímos novos referenciais que sustentarão sua transformação.</p>
+                </div>
+                <div class="step">
+                    <div class="step-letter">D</div>
+                    <h3>Dissolução</h3>
+                    <p>Aplicamos técnicas avançadas para dissolver bloqueios emocionais e padrões que te impedem de avançar.</p>
+                </div>
+                <div class="step">
+                    <div class="step-letter">A</div>
+                    <h3>Avaliação</h3>
+                    <p>Elaboramos um plano de ação personalizado para consolidar os resultados e garantir mudanças duradouras.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="diferenciais">
+        <div class="container">
+            <h2>Por Que Escolher o Método Supleno?</h2>
+            <div class="diferenciais-grid">
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">⚡</div>
+                    <h3>Resultados Rápidos</h3>
+                    <p>Mudanças perceptíveis desde as primeiras sessões</p>
+                </div>
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">🎯</div>
+                    <h3>Foco em Solução</h3>
+                    <p>Objetividade e direcionamento para o que realmente importa</p>
+                </div>
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">🧠</div>
+                    <h3>Técnicas Avançadas</h3>
+                    <p>Combinação de métodos comprovados cientificamente</p>
+                </div>
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">💻</div>
+                    <h3>100% Online</h3>
+                    <p>Atendimento remoto com mesma eficácia do presencial</p>
+                </div>
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">🔒</div>
+                    <h3>Sigilo Absoluto</h3>
+                    <p>Ambiente seguro e confidencial</p>
+                </div>
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">⭐</div>
+                    <h3>Atendimento Personalizado</h3>
+                    <p>Cada sessão é única e adaptada às suas necessidades</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sobre">
+        <div class="container">
+            <h2>Sobre Maurício Supleno</h2>
+            <div class="sobre-content">
+                <p>Com mais de 15 anos de experiência em desenvolvimento humano, Maurício Supleno é especialista em <strong>Terapia Provocativa</strong> e <strong>Hipnose Integral</strong>.</p>
+                
+                <p>Criador do <strong>Método Supleno</strong>, combina técnicas avançadas de PNL, Hipnoterapia, Coaching e Terapia Breve para promover transformações profundas e duradouras.</p>
+                
+                <p>Sua abordagem direta e eficaz já ajudou centenas de pessoas a superarem bloqueios, alcançarem objetivos e viverem uma vida mais plena e autêntica.</p>
+                
+                <p><em>"Acredito que cada pessoa tem o potencial de criar a vida que deseja. Meu papel é ajudar você a desbloquear esse potencial."</em></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Pronto Para Sua Transformação?</h2>
+            <p>Agende sua sessão e descubra como o Método Supleno pode transformar sua vida</p>
+            <a href="https://wa.me/5527981125528?text=Olá!%20Quero%20agendar%20uma%20sessão%20com%20Maurício%20Supleno!" class="btn">Agendar Agora</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Maurício Supleno - Todos os direitos reservados</p>
+            <p>WhatsApp: <a href="https://wa.me/5527981125528">(27) 92000-0166</a></p>
+        </div>
+    </footer>
+</body>
+</html>
